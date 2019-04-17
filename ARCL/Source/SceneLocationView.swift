@@ -102,7 +102,6 @@ public class SceneLocationView: ARSCNView {
 
         debugOptions = showFeaturePoints ? [ARSCNDebugOptions.showFeaturePoints] : debugOptions
         
-        NSLog("finishInit")
         let touchGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(sceneLocationViewTouched(sender:)))
         self.addGestureRecognizer(touchGestureRecognizer)
     }
@@ -215,7 +214,6 @@ public extension SceneLocationView {
     }
     
     @objc func sceneLocationViewTouched(sender: UITapGestureRecognizer) {
-        NSLog("touched")
         guard let touchedView = sender.view as? SCNView else {
             return
         }
